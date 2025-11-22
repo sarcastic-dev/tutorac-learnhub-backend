@@ -6,6 +6,7 @@ import { errorHandler } from "./middleware/error.middleware";
 import authRouter from "./routes/auth.routes";
 import protectedRouter from "./routes/protected.routes";
 import adminRouter from "./routes/admin.routes";
+import courseRouter from "./routes/course.routes";
 import path from "path";
 
 const app = express();
@@ -28,5 +29,6 @@ app.use("/health", healthRouter);
 app.use("/auth", authRouter);
 app.use("/protected", protectedRouter);
 app.use("/admin", adminRouter);
+app.use("/courses", courseRouter);
 
 export default app;
